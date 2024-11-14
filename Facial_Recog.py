@@ -21,7 +21,7 @@ resnet = InceptionResnetV1(pretrained='vggface2').eval()
 
 from PIL import Image
 
-path = 'C:\\Users\\Aidan\\Code\\tinkering\\Face_rec\\face_rec\\'
+path = 'C:/Users/aidanbaydush/Code/Tinkering/face_rec/face_rec/test_images/Aidan_1.png'
 
 img = Image.open(path)
 
