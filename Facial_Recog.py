@@ -15,18 +15,21 @@ from tqdm.notebook import tqdm
 model = MTCNN()
 
 
-mtcnn = MTCNN(image_size=<image_size>, margin=<margin>)
-resnet = InceptionResnetV1(pretrained='vggface2').eval()
-
 
 from PIL import Image
 
-path = 'C:/Users/aidanbaydush/Code/Tinkering/face_rec/face_rec/test_images/Aidan_1.png'
+path = '/Users/aidanbaydush/Code/Tinkering/face_rec/test_images/Aidan_1.jpeg'
 
 img = Image.open(path)
 
+width = img.width
+height = img.height
+
+mtcnn = MTCNN(image_size=___, margin=__)
+resnet = InceptionResnetV1(pretrained='vggface2').eval()
+
 # Get cropped and prewhitened image tensor
-img_cropped = mtcnn(img, save_path=<optional save path>)
+img_cropped = mtcnn(img, save_path='/Users/aidanbaydush/Code/Tinkering/face_rec/modified images')
 
 # Calculate embedding (unsqueeze to add batch dimension)
 img_embedding = resnet(img_cropped.unsqueeze(0))
